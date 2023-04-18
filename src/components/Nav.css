@@ -1,0 +1,23 @@
+#logoHenry {
+  margin-right: 20px;
+
+}
+
+.navbar{
+  display: flex;
+  background-color: rgb(5, 29, 78);
+  color: rgb(233, 224, 224);
+
+}
+
+span {
+  padding: 40px;
+  font-size: larger;
+}
+input{
+  border-radius: 6px;
+  margin-bottom: 5px;
+  border:2.5px solid cadetblue;
+  background: none;
+  color: aliceblue;
+}
