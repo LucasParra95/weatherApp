@@ -12,9 +12,6 @@ function App() {
         <Routes>
     <Route exact path="/" element={<Home/>} />
     <Route path="/:id" element={<Detail/>}/>
-    {/*<Route path="/addActivity" component={ActivityCreate}/>
-    <Route path="/home/:id" component={Detail}/> */}
-
         </Routes>
       </div>
     </BrowserRouter>
