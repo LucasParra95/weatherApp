@@ -30,7 +30,9 @@ export default function Detail(){
                         weather: recurso.weather[0].main,
                         clouds: recurso.clouds.all,
                         latitud: recurso.coord.lat,
-                        longitud: recurso.coord.lon
+                        longitud: recurso.coord.lon,
+                        sunrise: new Date(recurso.sys.sunrise*1000).toLocaleTimeString("en-US"),
+                        sunset: new Date(recurso.sys.sunset*1000).toLocaleTimeString("en-US")
                         };
                     setCity(ciudad)
             });
@@ -57,19 +59,22 @@ export default function Detail(){
                         <h1>{city.temp} °C</h1>
                     </div>
                     <div >
-                        <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+city.img+"@2x.png"} width="100" height="100" alt="" />
+                        <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+city.img+"@2x.png"} width="100" height="100" alt="Loading..." />
                         <h5>{city.weather}</h5>
                         <p>Cloudiness: {city.clouds}%</p>
                     </div>
                     <div>
-                        <p>Wind Speed</p>
-                        <h5>{Number.parseFloat(city.wind * 3.6).toFixed(2)} km/h</h5>
-                        <p>Feels like</p>
-                        <h5>{city.feelsLike} °C</h5>
-                        <p>Humidity</p>
-                        <h5>{city.humidity}%</h5>
-                        <p>Pressure</p>
-                        <h5>{city.pressure} hPa</h5>
+                        <h5>Feels like</h5>
+                        <p>{city.feelsLike} °C</p>
+
+                        <h5>Wind Speed</h5>
+                        <p>{Number.parseFloat(city.wind * 3.6).toFixed(2)} km/h</p>
+
+                        <h5>Humidity</h5>
+                        <p>{city.humidity}%</p>
+
+                        <h5>Pressure</h5>
+                        <p>{city.pressure} hPa</p>
 
                     </div>
                 </div>
@@ -77,14 +82,20 @@ export default function Detail(){
                 <div className='weatherData'>
                     <div className='minMax'>
                     <h6>Min:</h6>
-                    <p>{city.min}°</p>
+                    <p>{city.min}°C</p>
                     </div>
                     <div className='minMax'>
                     <h6>Max:</h6>
-                    <p>{city.max}°</p>
+                    <p>{city.max}°C</p>
                     </div>
-                    {/* <iframe src = {`https://www.openstreetmap.org/search?query=${city.latitud}%2C${city.longitud}#map=13/${city.latitud}/${city.longitud}&output=embed`}></iframe> */}
-                    {/* <img src={`http://map.positionstack.com/${city.latitud},${city.longitud}`} alt="" /> */}
+                    <div className='minMax'>
+                    <h6>Sunrise:</h6>
+                    <p>{city.sunrise}</p>
+                    </div>
+                    <div className='minMax'>
+                    <h6>Sunset:</h6>
+                    <p>{city.sunset}</p>
+                    </div>
                 </div>
             </div>
         </div>

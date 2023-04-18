@@ -1,6 +1,8 @@
 .Detail{
     display: grid;
     padding: 5%;
+    width: max-content;
+    justify-items: center;
 }
 
 .detailBody{
@@ -25,6 +27,7 @@
 .weatherData{
     display: flex;
     margin: 0.5rem;
+    border-radius: 10px;
     border: 2px solid rgb(68, 68, 68);
     width: 100%;
     justify-content: space-evenly;
@@ -46,8 +49,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.5rem;
+    margin: 0.3rem;
     width: 100%;
+    border-radius: 10px;
     border: 2px solid rgb(68, 68, 68);
 }
 
