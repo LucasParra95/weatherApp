@@ -1,0 +1,60 @@
+.Detail{
+    display: grid;
+    padding: 5%;
+}
+
+.detailBody{
+    display: grid;
+    background-color: #ffffff6a;
+    justify-content: space-around;
+    justify-items: center;
+    border-radius: 20px;
+    box-shadow: 15px 15px rgba(44, 45, 46, 0.144);
+    padding: 2rem;
+}
+
+.cityName{
+    width: 800px;
+    display: contents;
+    
+}
+/* .cityName h2{
+    margin-top: 3rem;
+} */
+
+.weatherData{
+    display: flex;
+    margin: 0.5rem;
+    border: 2px solid rgb(68, 68, 68);
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.weatherData div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.minMax{
+    width: 7rem;
+    text-align: center;
+}
+
+.currentWeather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    width: 100%;
+    border: 2px solid rgb(68, 68, 68);
+}
+
+.currentWeather div{
+
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 2rem;
+}
