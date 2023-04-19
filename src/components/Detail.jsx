@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import dotenv from 'dotenv';
 import { useParams } from 'react-router-dom';
 import './Detail.css'
-dotenv.config();
+
 
 
 

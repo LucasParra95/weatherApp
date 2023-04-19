@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import '../App.css';
 import Cards from './Cards.jsx';
 import Nav from './Nav.jsx';
-import dotenv from 'dotenv';
-dotenv.config();
+
 
 export default function Home() {
   const [cities, setCities] = useState([]);
